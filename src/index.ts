@@ -2,7 +2,15 @@ require('dotenv').config()
 
 import express from 'express'
 
-exports.myFunction = async (req: express.Request, res: express.Response) => {
-  
+const app = express();
+
+app.get('/', async (req: express.Request, res: express.Response) => {
+
     res.status(200).send(`Hello World. (error)`)
-}
+})
+
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => {
+    console.log('Listening on port', port);
+});
