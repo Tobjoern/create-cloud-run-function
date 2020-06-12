@@ -6,7 +6,7 @@ const app = express();
 
 app.get('/', async (req: express.Request, res: express.Response) => {
 
-    res.status(200).send(`Hello World. (error)`)
+    res.status(200).send(`Hello World.`)
 })
 
 const port = process.env.PORT || 8080;
